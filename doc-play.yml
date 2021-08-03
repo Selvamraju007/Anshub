@@ -1,0 +1,20 @@
+---
+- hosts: all
+  name: "Create Docker container"
+  tasks:
+    - name: "Create docker image"
+      docker_image:
+        name: nginx
+        source: pull
+    - name: "Run Container"
+      docker_container: 
+        name: webapp
+        image: nginx
+        state: present
+        interactive: yes
+        tty: yes
+        detach: yes
+        ports:
+        - "8008:80"
+     
+     
