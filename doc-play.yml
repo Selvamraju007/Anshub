@@ -10,7 +10,7 @@
       docker_container: 
         name: webapp
         image: nginx
-        state: present
+        state: started
         interactive: yes
         tty: yes
         detach: yes
