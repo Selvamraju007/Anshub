@@ -2,7 +2,7 @@
 - hosts: all
   become: True
   tasks:
-    - name: Install tree packages
+    - name: Install apache packages
       apt:
         name: apache2
         state: "present"
